@@ -1,0 +1,22 @@
+<div class="modal fade" id="addStockModal" tabindex="-1" role="dialog" aria-labelledby="addStockModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addStockModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= form_for :stocks do |f| %>
+        <div class="modal-body">
+          <%= f.label :symbol, "Enter stock symbol" %>
+          <%= f.text_field :symbol, class: "form-control" %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit class: "btn btn-success", value: "Add Stock" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

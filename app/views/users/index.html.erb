@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <h1>Sign Up</h1>
+  <%= form_for :user do |f| %>
+    <div class="field">
+      <%= f.label :username %>
+      <%= f.text_field :username, class: "form-control" %> <br>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control" %> <br>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_field, "Password" %>
+      <%= f.password_field :password, class: "form-control" %> <br>
+    </div>
+
+    <%= f.submit class: "btn btn-primary float-right", value: "Sign Up" %>
+  <% end %>
+</div>
